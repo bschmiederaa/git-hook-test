@@ -8,6 +8,7 @@
     "build:bad": "echo \"Fake build broke\" && exit 1",
     "lint": "echo \"Fake lint all good\" && exit 0",
     "pre-push": "npm run build:bad && npm run lint"
+    "pre-commit": "npm run build:bad && npm run lint"
   },
   "repository": {
     "type": "git",
