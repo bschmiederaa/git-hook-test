@@ -1,0 +1,25 @@
+{
+  "name": "git-hook-test",
+  "version": "1.0.0",
+  "description": "git pre-push hook test",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Fake build all good\" && exit 0",
+    "build:bad": "echo \"Fake build broke\" && exit 1",
+    "lint": "echo \"Fake lint all good\" && exit 0",
+    "pre-push": "npm run build:bad && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bschmiederaa/git-hook-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bschmiederaa/git-hook-test/issues"
+  },
+  "homepage": "https://github.com/bschmiederaa/git-hook-test#readme",
+  "devDependencies": {
+    "husky": "0.13.3"
+  }
+}
